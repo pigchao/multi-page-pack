@@ -1,0 +1,23 @@
+{
+  "extends": ["tslint:latest", "tslint-react", "tslint-config-prettier", "tslint-plugin-prettier"],
+  "rules": {
+    "no-console": false,
+    "no-debugger": false,
+    "object-literal-sort-keys": false,
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false,
+    "interface-name": false,
+    "member-access": [true, "no-public"],
+    "no-empty-interface": false,
+    "no-unused-expression": false,
+    "ordered-imports": false,
+    "no-empty": false,
+    "variable-name": [true, "ban-keywords", "allow-leading-underscore"],
+    "max-classes-per-file": [true, 5, "exclude-class-expressions"],
+    "prettier": [true, ".prettierrc"]
+  },
+  "jsRules": {
+    "object-literal-sort-keys": false
+  },
+  "rulesDirectory": ["tslint-plugin-prettier"]
+}

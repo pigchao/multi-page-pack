@@ -1,0 +1,8 @@
+{
+  "react-test/index": {
+    "preRender": true
+  },
+  "vue-test/index": {
+    "preRender": true
+  }
+}

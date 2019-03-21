@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "exec_mode": "fork",
+      "script": "./dist/server/server.js",
+      "name": "pack-server",
+      "error_file": "~/webapp/logs/pack-server.err.log",
+      "out_file": "~/webapp/logs/pack-server.out.log",
+      "merge_logs": true,
+      "log_date_format" : "YYYY/MM/DD HH:mm Z"
+    }
+  ]
+}

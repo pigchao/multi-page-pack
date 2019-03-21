@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html>
+<head lang="<%= pub.language %>">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title><%- introduce.title %></title>
+    <script>
+      (function () {
+        function isPc(){
+          var userAgentInfo = navigator.userAgent.toLowerCase();
+          var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+          var flag = true;
+          for(var i = 0; i < Agents.length;i++){
+            if( userAgentInfo.indexOf(Agents[i]) > 0 ){
+              flag = false;
+              break;
+            }
+          }
+          return flag;
+        }
+        function setRem() {
+          var status = isPc();
+          var curWidth = document.documentElement.clientWidth || window.screen.width;
+          curWidth = ( status && curWidth > 750 ) ? 750 : curWidth;
+          var basicWidth = 375;
+          var basicFontSize = 10;
+          var calcFontSize = curWidth / basicWidth * basicFontSize;
+          document.documentElement.style.fontSize = calcFontSize + 'px';
+          status && document.documentElement.classList.add('isPC');
+        }
+
+        setRem();
+        window.addEventListener('resize', function () {
+          setRem();
+        });
+      })();
+    </script>
+</head>
+<body class="<%- pub.language %>">
+
+<!-- Str wrap -->
+<div id="test">
+
+
+
+</div>
+<!-- End wrap -->
+</body>
+</html>

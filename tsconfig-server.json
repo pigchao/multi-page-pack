@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "outDir": false,
+        "sourceMap": true,
+        "strictNullChecks": false,
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "target": "es6",
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "allowJs": true,
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
+    },
+    "include": [
+        "./src/server/*",
+        "./src/public/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "./src/server/devApp.ts"
+    ]
+}

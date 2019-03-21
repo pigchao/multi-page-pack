@@ -1,0 +1,22 @@
+
+#IDE config
+.idea
+
+.vscode
+
+*.tar
+lib*
+dist*
+logs*
+
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+node_modules
+
+#Log file
+npm-debug.log
+
+*.sh
+
+tmp/*
+

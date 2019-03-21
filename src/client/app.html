@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>&#65279;</title> <!-- 空标题，不可见字符 -->
+    <script>
+      (function () {
+        function isPc(){
+          var userAgentInfo = navigator.userAgent.toLowerCase();
+          var Agents = new Array("android", "iphone", "symbianOS", "windows phone", "ipad", "ipod");
+          var flag = true;
+          for(var i = 0; i < Agents.length;i++){
+            if( userAgentInfo.indexOf(Agents[i]) > 0 ){
+              flag = false;
+              break;
+            }
+          }
+          return flag;
+        }
+        function setRem() {
+          var status = isPc();
+          var curWidth = document.documentElement.clientWidth || window.screen.width;
+           curWidth = ( status && curWidth > 750 ) ? 750 : curWidth;
+          var basicWidth = 375;
+          var basicFontSize = 10;
+          var calcFontSize = curWidth / basicWidth * basicFontSize;
+          document.documentElement.style.fontSize = calcFontSize + 'px';
+          status && document.documentElement.classList.add('isPC');
+        }
+
+        setRem();
+        window.addEventListener('resize', function () {
+          setRem();
+        });
+      })();
+    </script>
+</head>
+<body>
+<div id="app">
+</div>
+</body>
+</html>

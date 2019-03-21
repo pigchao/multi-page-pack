@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import",
+    ["@babel/plugin-proposal-decorators", {"decoratorsBeforeExport": true}],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-transform-exponentiation-operator"
+  ],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+}
